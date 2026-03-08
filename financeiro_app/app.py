@@ -60,6 +60,11 @@ def criar_tabelas():
     conn.close()
 
 
+# 🔹 ESTA LINHA FOI ADICIONADA (para funcionar no Render)
+with app.app_context():
+    criar_tabelas()
+
+
 # ---------------- LOGIN ----------------
 
 @app.route("/")

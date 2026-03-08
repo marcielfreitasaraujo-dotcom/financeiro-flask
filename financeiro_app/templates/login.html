@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Login - Sistema Financeiro</title>
+
+<style>
+
+body{
+font-family:Arial;
+background:linear-gradient(120deg,#4e73df,#1cc88a);
+height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+.card{
+
+background:white;
+padding:40px;
+border-radius:12px;
+width:350px;
+box-shadow:0 10px 30px rgba(0,0,0,0.2);
+
+}
+
+h2{
+text-align:center;
+margin-bottom:25px;
+}
+
+input{
+
+width:100%;
+padding:12px;
+margin-top:10px;
+border:1px solid #ccc;
+border-radius:6px;
+
+}
+
+button{
+
+width:100%;
+padding:12px;
+margin-top:20px;
+border:none;
+border-radius:6px;
+background:#4e73df;
+color:white;
+font-size:16px;
+cursor:pointer;
+
+}
+
+button:hover{
+background:#2e59d9;
+}
+
+.link{
+
+text-align:center;
+margin-top:15px;
+
+}
+
+.link a{
+
+text-decoration:none;
+color:#4e73df;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="card">
+
+<h2>Login</h2>
+
+<form action="/logar" method="POST">
+
+<input type="text" name="usuario" placeholder="Usuário" required>
+
+<input type="password" name="senha" placeholder="Senha" required>
+
+<button type="submit">Entrar</button>
+
+</form>
+
+<div class="link">
+
+<a href="/registrar">Criar conta</a>
+
+</div>
+
+</div>
+
+</body>
+
+</html>

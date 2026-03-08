@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Gerenciar Usuários</title>
+
+<style>
+
+body{
+font-family:Arial;
+background:#f4f6f9;
+padding:40px;
+}
+
+table{
+width:100%;
+background:white;
+border-collapse:collapse;
+box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+table th, table td{
+padding:12px;
+border-bottom:1px solid #ddd;
+text-align:left;
+}
+
+button{
+padding:6px 10px;
+border:none;
+background:red;
+color:white;
+border-radius:5px;
+cursor:pointer;
+}
+
+button:hover{
+background:#b30000;
+}
+
+.voltar{
+background:#007bff;
+margin-top:20px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>Usuários do Sistema</h1>
+
+<table>
+
+<tr>
+<th>ID</th>
+<th>Usuário</th>
+<th>Tipo</th>
+<th>Ação</th>
+</tr>
+
+{% for u in usuarios %}
+
+<tr>
+
+<td>{{u[0]}}</td>
+<td>{{u[1]}}</td>
+<td>{{u[2]}}</td>
+
+<td>
+
+{% if u[1] != "admin" %}
+
+<a href="/excluir_usuario/{{u[0]}}" onclick="return confirm('Deseja excluir este usuário?')">
+<button>Excluir</button>
+</a>
+
+{% endif %}
+
+</td>
+
+</tr>
+
+{% endfor %}
+
+</table>
+
+<br>
+
+<a href="/dashboard">
+<button class="voltar">Voltar ao Dashboard</button>
+</a>
+
+</body>
+
+</html>

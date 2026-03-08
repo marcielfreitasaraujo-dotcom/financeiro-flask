@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Criar Usuário</title>
+
+<style>
+
+body{
+font-family:Arial;
+background:#f4f6f9;
+height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+.card{
+background:white;
+padding:40px;
+border-radius:10px;
+width:350px;
+box-shadow:0 0 15px rgba(0,0,0,0.1);
+}
+
+input{
+width:100%;
+padding:12px;
+margin-top:10px;
+border:1px solid #ccc;
+border-radius:6px;
+}
+
+button{
+width:100%;
+padding:12px;
+margin-top:20px;
+border:none;
+background:#1cc88a;
+color:white;
+border-radius:6px;
+font-size:16px;
+}
+
+button:hover{
+background:#17a673;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="card">
+
+<h2>Criar Usuário</h2>
+
+<form action="/criar_usuario" method="POST">
+
+<input name="usuario" placeholder="Usuário" required>
+
+<input type="password" name="senha" placeholder="Senha" required>
+
+<button type="submit">Criar conta</button>
+
+</form>
+
+</div>
+
+</body>
+
+</html>
